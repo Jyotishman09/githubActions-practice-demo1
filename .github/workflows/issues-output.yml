@@ -1,0 +1,12 @@
+name: Output Issues event
+on: 
+  issues:
+    types: [opened, edited, milestoned]
+jobs:
+  output_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Issue Details
+        run: echo "${{ github }}"
+
+
